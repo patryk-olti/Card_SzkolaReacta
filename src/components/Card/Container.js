@@ -7,7 +7,8 @@ const Container = ({ children, height, width }) => {
         width: `${width}px`,
         border: '1px solid rgba(221, 221, 221, 0.8)',
         borderRadius: '5px',
-        boxShadow: '2px 2px 2px rgba(221, 221, 221, 0.8)'
+        boxShadow: '2px 2px 2px rgba(221, 221, 221, 0.8)',
+        overflow: 'hidden'
     }
 
     return(

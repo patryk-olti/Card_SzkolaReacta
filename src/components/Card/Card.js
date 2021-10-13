@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Container from "./Container";
 import Section from "./Section";
@@ -12,15 +12,21 @@ import Image from "./Image";
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const Card = ({ data }) => {
 
     const { title, date, short, long, img} = data;
 
+    const [ visibilityLong, setVisibilityLong ] = useState(false);
+
+    const toggleVisibilityLong = () => setVisibilityLong( prev => !prev );
+
+    const height = visibilityLong ? `880` : `400`;
+
     return(
-       <Container  height='400' width='320'>
+       <Container height={height} width='320'>
            <Section padding='15' flexDirection='row' alignItems='space-between' justifyContent='space-between'>
                 <LoginCircle bgColor='rgba(255, 50, 0, 0.8)' size='45' color='white' />
                 <Section flexDirection='column' alignItems='center' justifyContent='space-beetwen' >
@@ -43,9 +49,12 @@ const Card = ({ data }) => {
                     <Button icon={faHeart}  size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
                     <Button icon={faLink}  size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
                 </Section>
-                <Button icon={faChevronUp} size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
+                <Button icon={faChevronDown} size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' toggleFun={toggleVisibilityLong} />
             </Section>
-            
+
+            <Section>
+                <TextSide text={long} size='16' padding='10' />
+            </Section>         
        </Container>
     );
 }
