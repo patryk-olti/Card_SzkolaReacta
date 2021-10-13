@@ -1,10 +1,20 @@
 import Card from './components/Card/Card';
+
 import './styles/App.css';
+
+const data = [
+  {
+    title: 'Shrimp and Chorizo Paella',
+    date: 'September 14, 2016',
+    short: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+    long: 'xyz'
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <Card />
+      <Card data={data[0]} />
     </div>
   );
 }

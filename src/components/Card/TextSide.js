@@ -1,10 +1,10 @@
 import React from "react";
 
-const TextSide = ({ text, size }) => {
+const TextSide = ({ text, size, padding }) => {
 
     const styles = {
         width: '100%',
-        padding: '2px',
+        padding: `${padding}px`,
         fontSize: `${size}px`,
         textAligh: 'left'
     }
