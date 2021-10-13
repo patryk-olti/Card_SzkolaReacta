@@ -7,16 +7,17 @@ import LoginCircle from "./LoginCircle";
 import TextSide from "./TextSide";
 import Button from "./Button";
 
-import Shrimps from '../../img/shrimps.jpg';
 import Image from "./Image";
 
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
-
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 const Card = ({ data }) => {
 
-    const { title, date, short, long} = data;
+    const { title, date, short, long, img} = data;
 
     return(
        <Container  height='400' width='320'>
@@ -30,14 +31,21 @@ const Card = ({ data }) => {
            </Section>
 
             <Section>
-                <Image src={Shrimps} alt='shrimps' />
+                <Image src={img} alt='shrimps' />
             </Section>
 
             <Section>
                 <TextSide text={short} size='16' padding='10' />
             </Section>
 
-
+            <Section padding='5' flexDirection='row' alignItems='center' justifyContent='space-between'>
+                <Section padding='0' flexDirection='row' alignItems='center' justifyContent='space-between'>
+                    <Button icon={faHeart}  bgColor='transparent' size='45' color='gray' />
+                    <Button icon={faLink}  bgColor='transparent' size='45' color='gray' />
+                </Section>
+                <Button icon={faChevronUp}  bgColor='transparent' size='45' color='gray' />
+            </Section>
+            
        </Container>
     );
 }
