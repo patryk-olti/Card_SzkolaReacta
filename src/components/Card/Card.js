@@ -27,7 +27,7 @@ const Card = ({ data }) => {
                     <TextSide text={title} size='16' padding='2' />
                     <TextSide text={date} size='14' padding='2' />
                 </Section>
-                <Button icon={faEllipsisV}  bgColor='transparent' size='45' color='gray' />
+                <Button icon={faEllipsisV} size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
            </Section>
 
             <Section>
@@ -40,10 +40,10 @@ const Card = ({ data }) => {
 
             <Section padding='5' flexDirection='row' alignItems='center' justifyContent='space-between'>
                 <Section padding='0' flexDirection='row' alignItems='center' justifyContent='space-between'>
-                    <Button icon={faHeart}  bgColor='transparent' size='45' color='gray' />
-                    <Button icon={faLink}  bgColor='transparent' size='45' color='gray' />
+                    <Button icon={faHeart}  size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
+                    <Button icon={faLink}  size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
                 </Section>
-                <Button icon={faChevronUp}  bgColor='transparent' size='45' color='gray' />
+                <Button icon={faChevronUp} size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
             </Section>
             
        </Container>

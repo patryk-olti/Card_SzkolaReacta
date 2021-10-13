@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Button = ({ icon, size, bgColor, color }) => {
+const Button = ({ icon, size, activeBgColor, disActiveBgColor, color }) => {
+
+    const [ mouseOn, setMouseOn ] = useState(false);
 
     const iconPrint = {icon} ? <FontAwesomeIcon icon={icon} /> : null;
 
@@ -13,13 +15,14 @@ const Button = ({ icon, size, bgColor, color }) => {
         fontSize: `${size-25}px`,
         borderRadius: '50%',
         textAlign: 'center',
-        backgroundColor: `${bgColor}`,
+        backgroundColor: mouseOn ? `${activeBgColor}` : `${disActiveBgColor}`,
         color: `${color}`,
-        fontFamily: 'Roboto'
+        fontFamily: 'Roboto',
+        cursor: 'pointer'
     }
 
     return(
-        <div style={styles}>
+        <div style={styles} onMouseEnter={() => setMouseOn(true)} onMouseLeave={() => setMouseOn(false)} >
             { iconPrint }
         </div>
     )
