@@ -36,7 +36,7 @@ const Card = ({ data }) => {
                 <Button icon={faEllipsisV} size='45' activeBgColor='rgba(228, 228, 228, 0.4)' disActiveBgColor='transparent' color='gray' />
            </Section>
 
-            <Section>
+            <Section height='180' >
                 <Image src={img} alt='shrimps' />
             </Section>
 

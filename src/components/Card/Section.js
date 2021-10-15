@@ -1,12 +1,13 @@
 import React from "react";
 
-const Section = ({ children, padding, flexDirection, alignItems, justifyContent }) => {
+const Section = ({ children, padding, flexDirection, alignItems, justifyContent, height }) => {
 
     const styles = {
         display: 'flex',
         flexDirection: `${flexDirection}`,
         alignItems: `${alignItems}`,
         justifyContent: `${justifyContent}`,
+        height: `${height}px`,
         padding: `${padding}px`,
     }
 

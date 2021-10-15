@@ -31,11 +31,20 @@ const styles = {
 
 const Menu = () => {
 
+    const [ isActive, setIsActive ] = useState("Home");
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setIsActive(e.target.name)
+    }
+
     const links = data.map(item => 
         <MenuLink 
             key={item.title} 
             to={item.to} 
             title={item.title} 
+            isActive={isActive}
+            handleClick={handleClick}
         />
     )
 
