@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import Container from "./Container";
-import Section from "./Section";
+import Container from "../libraryComponents/Container";
+import Section from "../libraryComponents/Section";
 
 import LoginCircle from "./LoginCircle";
-import TextSide from "./TextSide";
+import TextSide from "../libraryComponents/TextSide";
 import Button from "./Button";
 
 import Image from "./Image";

@@ -1,5 +1,6 @@
 import Card from './components/Card/Card';
 import Menu from './components/Menu/Menu';
+import Employees from './components/Employees/Employees';
 
 import Shrimps from './img/shrimps.jpg';
 import Spaghetti from './img/spaghetti_bolognese.jpg';
@@ -26,9 +27,14 @@ const data = [
 function App() {
   return (
     <div className="App">
+    {/*
       <Menu />
       <Card data={data[0]} />
       <Card data={data[1]} />
+    */}
+
+    <Employees />
+
     </div>
   );
 }

@@ -8,7 +8,8 @@ const Section = ({ children, padding, flexDirection, alignItems, justifyContent,
         alignItems: `${alignItems}`,
         justifyContent: `${justifyContent}`,
         height: `${height}px`,
-        padding: `${padding}px`,
+        width: `100%`,
+        padding: `${padding}px`
     }
 
     return(
