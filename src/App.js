@@ -1,4 +1,5 @@
-import Card from './components/Card/Card';
+/*import Card from './components/Card/Card';*/
+import Menu from './components/Menu/Menu';
 
 import Shrimps from './img/shrimps.jpg';
 
@@ -17,7 +18,8 @@ const data = [
 function App() {
   return (
     <div className="App">
-      <Card data={data[0]} />
+      {/*<Card data={data[0]} />*/}
+      <Menu />
     </div>
   );
 }
