@@ -25,16 +25,16 @@ const data = [
 ]
 
 function App() {
+
+  const cards = data.map( item => (
+    <Card data={item}/>
+  ))
+
   return (
     <div className="App">
-    {/*
       <Menu />
-      <Card data={data[0]} />
-      <Card data={data[1]} />
-    */}
-
-    <Employees />
-
+      {cards}
+      <Employees />
     </div>
   );
 }

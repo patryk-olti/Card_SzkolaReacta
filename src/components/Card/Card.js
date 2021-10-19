@@ -26,7 +26,7 @@ const Card = ({ data }) => {
     const height = visibilityLong ? `880` : `400`;
 
     return(
-       <Container height={height} width='320'>
+       <Container height={height} width='330'>
            <Section padding='15' flexDirection='row' alignItems='space-between' justifyContent='space-between'>
                 <LoginCircle bgColor='rgba(255, 50, 0, 0.8)' size='45' color='white' />
                 <Section flexDirection='column' alignItems='center' justifyContent='space-beetwen' >

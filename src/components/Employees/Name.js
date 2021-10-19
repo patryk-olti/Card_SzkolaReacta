@@ -1,5 +1,5 @@
 import React from "react";
 
-const Name = ({ name, surname }) => <div>{name} {surname}</div>
+const Name = ({ name, surname, handleClick }) => <div onClick={handleClick}>{name} {surname}</div>
 
 export default Name;

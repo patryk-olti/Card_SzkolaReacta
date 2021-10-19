@@ -33,16 +33,18 @@ const data = [
 
 const Employees = () => {
 
+    const listEmployers = data.map( item => (
+        <Employer 
+            data={item}
+            size='20'
+        />))
+
     return(
-        <Container width='500'> 
+        <Container width='600'> 
             <Section padding='0' flexDirection='row' alignItems='space-between' justifyContent='space-between'>
-
                 <Section padding='15' flexDirection='column' alignItems='space-between' justifyContent='space-between'>
-                    <Employer data={data[0]} size='20' />
-                    <Employer data={data[1]} size='20'/>
-                    <Employer data={data[2]} size='20'/>
+                    {listEmployers}
                 </Section>
-
            </Section>
         </Container>
     )
